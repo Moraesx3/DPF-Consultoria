@@ -269,24 +269,24 @@ menu.querySelectorAll('a').forEach(function (a) {
 });
 
 // Formulário: envia sem sair da página e mostra o resultado
-var form = document.getElementById('form-contato'), status = document.getElementById('form-status');
+var form = document.getElementById('form-contato'), aviso = document.getElementById('form-status');
 form.addEventListener('submit', function (e) {
   e.preventDefault();
   var botao = form.querySelector('button');
   botao.disabled = true; botao.textContent = 'Enviando…';
-  status.className = 'form-status'; status.textContent = '';
+  aviso.className = 'form-status'; aviso.textContent = '';
   fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
     .then(function (r) { return r.json(); })
     .then(function (d) {
       if (d.success) {
         form.reset();
-        status.classList.add('ok');
-        status.textContent = 'Pedido enviado. A Daiane vai responder pelo WhatsApp ou e-mail em breve.';
+        aviso.classList.add('ok');
+        aviso.textContent = 'Pedido enviado. A Daiane vai responder pelo WhatsApp ou e-mail em breve.';
       } else { throw new Error(); }
     })
     .catch(function () {
-      status.classList.add('erro');
-      status.textContent = 'Não foi possível enviar agora. Tente de novo ou chame no WhatsApp.';
+      aviso.classList.add('erro');
+      aviso.textContent = 'Não foi possível enviar agora. Tente de novo ou chame no WhatsApp.';
     })
     .finally(function () { botao.disabled = false; botao.textContent = 'Enviar pedido de diagnóstico'; });
 });
