@@ -1,0 +1,12 @@
+<svg width="320" height="120" viewBox="0 0 320 120" xmlns="http://www.w3.org/2000/svg">
+  <title>DPF Gestão e Consultoria em Saúde</title>
+
+  <text x="20" y="72" font-family="Georgia,serif" font-size="88" font-weight="700" fill="#185fa5">D</text>
+  <text x="72" y="72" font-family="Georgia,serif" font-size="88" font-weight="300" fill="#042c53">PF</text>
+
+  <text x="22" y="90" font-family="Arial,sans-serif" font-size="13" fill="#185fa5" letter-spacing="0.8">Daiane Palharini Frana</text>
+
+  <line x1="22" y1="97" x2="298" y2="97" stroke="#c5ddf4" stroke-width="1"/>
+
+  <text x="22" y="112" font-family="Arial,sans-serif" font-size="11" fill="#64748b" letter-spacing="1.5">GESTÃO · CONSULTORIA · SAÚDE</text>
+</svg>
